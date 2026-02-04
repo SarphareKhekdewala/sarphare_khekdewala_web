@@ -61,8 +61,8 @@ export default function AdminOrdersPage(): JSX.Element {
     }
   };
 
-  const filteredOrders = useMemo(() => 
-    orders.filter((order) => {
+  const filteredOrders = useMemo(() => {
+    return orders.filter((order) => {
       const searchLower = searchQuery.toLowerCase();
       const matchesSearch =
         order.orderNumber.toLowerCase().includes(searchLower) ||
@@ -74,8 +74,8 @@ export default function AdminOrdersPage(): JSX.Element {
         filters.paymentStatus === 'all' || order.paymentStatus === filters.paymentStatus;
 
       return matchesSearch && matchesPayment;
-    })
-  , [orders, searchQuery, filters.paymentStatus]);
+    });
+  }, [orders, searchQuery, filters.paymentStatus]);
 
   const handleBulkStatusUpdate = async (newStatus: string) => {
     if (selectedOrders.length === 0) {
