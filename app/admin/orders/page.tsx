@@ -1,5 +1,6 @@
 'use client';
 
+// Admin Orders Management Page
 import React, { useEffect, useState, useMemo } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
