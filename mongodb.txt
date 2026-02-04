@@ -1,0 +1,7 @@
+gw4qRwcPYHmtAMdg
+
+sarpharekhekdewala_db_user
+
+
+
+mongodb+srv://sarpharekhekdewala_db_user:gw4qRwcPYHmtAMdg@cluster0.qba2g0m.mongodb.net/?appName=Cluster0
