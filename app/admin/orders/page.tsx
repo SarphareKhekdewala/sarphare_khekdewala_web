@@ -171,16 +171,16 @@ export default function AdminOrdersPage(): JSX.Element {
 
   return (
     <div className="min-h-screen bg-gray-100">
-        {/* Header */}
-        <header className="bg-white shadow-md">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <LayoutDashboard className="text-primary-600" size={32} />
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-                <p className="text-sm text-gray-600">Sarphare Khekdewala</p>
-              </div>
+      {/* Header */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <LayoutDashboard className="text-primary-600" size={32} />
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
+              <p className="text-sm text-gray-600">Sarphare Khekdewala</p>
             </div>
+          </div>
           <div className="flex items-center gap-4">
             <span className="text-gray-700">Welcome, {session?.user?.name}</span>
             <button
