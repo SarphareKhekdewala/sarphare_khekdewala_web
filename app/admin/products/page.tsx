@@ -54,7 +54,7 @@ export default function AdminProductsPage() {
     } else if (status === 'authenticated') {
       fetchProducts();
     }
-  }, [status]);
+  }, [status, router]);
 
   const fetchProducts = async () => {
     try {

@@ -48,7 +48,7 @@ export default function AdminDashboard() {
     } else if (status === 'authenticated') {
       fetchStats();
     }
-  }, [status]);
+  }, [status, router]);
 
   const fetchStats = async () => {
     try {
@@ -286,7 +286,7 @@ export default function AdminDashboard() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ status, count }) => `${status}: ${count}`}
+                  label={({ payload }: any) => `${payload.status}: ${payload.count}`}
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="count"

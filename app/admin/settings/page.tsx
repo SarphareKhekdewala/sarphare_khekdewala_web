@@ -38,7 +38,7 @@ export default function AdminSettingsPage() {
     } else if (status === 'authenticated') {
       fetchDeliveryAreas();
     }
-  }, [status]);
+  }, [status, router]);
 
   const fetchDeliveryAreas = async () => {
     try {

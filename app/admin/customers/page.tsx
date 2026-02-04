@@ -32,7 +32,7 @@ export default function AdminCustomersPage() {
     } else if (status === 'authenticated') {
       fetchCustomers();
     }
-  }, [status]);
+  }, [status, router]);
 
   const fetchCustomers = async () => {
     try {
