@@ -140,8 +140,8 @@ export default function AdminOrdersPage(): JSX.Element {
     signOut({ callbackUrl: '/' });
   };
 
-  const getStatusBadge = (status: string) => {
-    const statusConfig: any = {
+  const getStatusBadge = (orderStatus: string) => {
+    const statusConfig: Record<string, { color: string; icon: typeof Clock }> = {
       pending: { color: 'bg-yellow-100 text-yellow-800', icon: Clock },
       confirmed: { color: 'bg-blue-100 text-blue-800', icon: CheckCircle },
       processing: { color: 'bg-purple-100 text-purple-800', icon: Package },
@@ -150,13 +150,13 @@ export default function AdminOrdersPage(): JSX.Element {
       cancelled: { color: 'bg-red-100 text-red-800', icon: XCircle },
     };
 
-    const config = statusConfig[status] || statusConfig.pending;
+    const config = statusConfig[orderStatus] || statusConfig.pending;
     const Icon = config.icon;
 
     return (
       <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium ${config.color}`}>
         <Icon size={14} />
-        {status.replace('_', ' ').toUpperCase()}
+        {orderStatus.replace('_', ' ').toUpperCase()}
       </span>
     );
   };
