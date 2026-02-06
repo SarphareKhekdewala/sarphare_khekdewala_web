@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { generateOrderNumber, calculateDeliveryCharge } from '@/lib/utils';
 import { sendOrderConfirmation } from '@/lib/email';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
