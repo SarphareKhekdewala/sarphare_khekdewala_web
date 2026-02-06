@@ -1,0 +1,10 @@
+# MongoDB Credentials (Example - Replace with your actual credentials)
+
+username: your_db_username
+password: your_db_password
+
+# MongoDB Connection String (Example format)
+mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/?appName=Cluster0
+
+# GitHub Token - DO NOT STORE HERE
+# Use environment variables or GitHub CLI for authentication
