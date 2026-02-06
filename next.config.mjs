@@ -9,6 +9,12 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma'],
+  },
+  // Skip route prerendering for API routes
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
 };
 
 export default nextConfig;

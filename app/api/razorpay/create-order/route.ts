@@ -3,13 +3,14 @@ import Razorpay from 'razorpay';
 import { prisma } from '@/lib/prisma';
 
 export const dynamic = 'force-dynamic';
-
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID!,
-  key_secret: process.env.RAZORPAY_KEY_SECRET!,
-});
+export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
+  // Initialize Razorpay at runtime
+  const razorpay = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID!,
+    key_secret: process.env.RAZORPAY_KEY_SECRET!,
+  });
   try {
     const body = await request.json();
     const { orderId, amount } = body;
